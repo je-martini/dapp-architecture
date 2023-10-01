@@ -1,0 +1,15 @@
+{
+  "name": "dapp-architecture",
+  "version": "1.0.0",
+  "description": "getting a better understanding of how build a dapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "hardhat": "^2.17.3"
+  }
+}
