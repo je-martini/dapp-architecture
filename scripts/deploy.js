@@ -5,6 +5,7 @@
 // will compile your contracts, add the Hardhat Runtime Environment's members to the
 // global scope, and execute the script.
 const hre = require("hardhat");
+const fs = require("fs");
 
 async function main() {
 
@@ -15,6 +16,10 @@ async function main() {
   console.log(
     `Crypto_menu was deployed to ${Crypto_menu.target}`
   );
+
+  let config = `export const abi_cryptomenu_address = "${Crypto_menu.target}"`;
+  let data = JSON.stringify(config);
+  fs.writeFileSync('../config.js', JSON.parse(data));
 }
 
 // We recommend this pattern to be able to use async/await everywhere
