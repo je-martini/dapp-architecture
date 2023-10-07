@@ -19,9 +19,9 @@ async function main() {
 
   let config = `export const abi_cryptomenu_address = "${Crypto_menu.target}"`;
   let data = JSON.stringify(config);
-  fs.writeFileSync('../config.js', JSON.parse(data));
+  fs.writeFileSync('../web/config.js', JSON.parse(data));
 
-  fs.copyFile('./artifacts/contracts/crypto_menu.sol/menu.json', './web/utils/abi/menu.js',
+  fs.copyFile('./artifacts/contracts/crypto_menu.sol/menu.json', '../web/utils/abi/menu.json',
     (err) => {
       if(err) {
         console.log('Error Ocurred: ', err);}

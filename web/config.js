@@ -1,1 +1,1 @@
-export const abi_cryptomenu_address = "0x0a73Cf935Dd94c497C21a220103187551F46BBA8"
+export const abi_cryptomenu_address = "0xA62fb427BCea39B0A8B3A01EE1b1541caE3AE75B"
