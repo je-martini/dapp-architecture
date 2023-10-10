@@ -14,6 +14,17 @@ const Home = () => {
         } else {
             console.log("metamask is installed :)")
         }
+
+        const accounts = await ethereum.request({ method: "eth_accounts"}); 
+
+        const provider = new ethers.providers.Web3Provider(ethereum);
+        const signer = provider.getSigner();
+
+        if(accounts.length != 0 ){
+            setWalletAccount(accounts[0]);
+        } else {
+            console.log('no authorized account');
+        }
     };
 
     useEffect(() => {
@@ -41,9 +52,21 @@ const Home = () => {
 
     return (
         <div>
-            <Navbar />
+            {(!walletAccount) && (
+                <div>
+                    <button onClick={connectMetamask}>
+                        Connect Meta Mask
+                    </button>
+                </div>
+            )}
+            {(walletAccount) && (
+                <div>
+                    <Navbar />
 
-            <h1>holaaa</h1>
+                    <h1>holaaa</h1>
+                </div>
+            )}
+            
         </div>
     );
 };
