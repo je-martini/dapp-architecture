@@ -18,7 +18,7 @@ export default function AddDish(){
         originCountry: "",
     });
 
-    const AddDish1 = async () => {
+    const AddDish = async () => {
         const { ethereum } = window;
         if (ethereum) {
             const provider = new ethers.providers.Web3Provider(ethereum);
@@ -52,7 +52,7 @@ export default function AddDish(){
                 }
                 />
                 <button
-                    onClick={AddDish1}>
+                    onClick={AddDish}>
                         Add Food
                 </button>
             </div>
